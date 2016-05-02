@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="32" pc="268435458" symbol="initialize"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="37" pc="268435479" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="38" pc="268435516" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="39" pc="268435559" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="40" pc="268435602" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="41" pc="268435645" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="42" pc="268435688" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="43" pc="268435731" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="44" pc="268435774" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="45" pc="268435817" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="46" pc="268435836" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="47" pc="268435855" symbol="onLayout"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="60" pc="268435875" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="61" pc="268435882" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="62" pc="268435899" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="63" pc="268435909" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="64" pc="268435934" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="65" pc="268435945" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="68" pc="268435961" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="69" pc="268435993" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="70" pc="268436000" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="73" pc="268436021" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="76" pc="268436086" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="77" pc="268436110" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="78" pc="268436151" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="82" pc="268436165" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="84" pc="268436195" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="85" pc="268436239" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="86" pc="268436299" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="88" pc="268436359" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="89" pc="268436395" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="90" pc="268436461" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="92" pc="268436545" symbol="onUpdate"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="110" pc="268436577" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="111" pc="268436594" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="113" pc="268436604" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="114" pc="268436629" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="116" pc="268436705" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="118" pc="268436781" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="120" pc="268436857" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="122" pc="268436933" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="124" pc="268437009" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="126" pc="268437085" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="128" pc="268437161" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="130" pc="268437223" symbol="drawBattery"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="135" pc="268437277" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="136" pc="268437296" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="139" pc="268437315" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="140" pc="268437335" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="141" pc="268437348" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="142" pc="268437379" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="144" pc="268437404" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="145" pc="268437435" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="146" pc="268437448" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="149" pc="268437470" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="150" pc="268437501" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="152" pc="268437532" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="153" pc="268437563" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="155" pc="268437594" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceView.mc" lineNum="156" pc="268437616" symbol="calAxis"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceBackground.mc" lineNum="8" pc="268437641" symbol="initialize"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceBackground.mc" lineNum="12" pc="268437662" symbol="initialize"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceBackground.mc" lineNum="17" pc="268437685" symbol="draw"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceBackground.mc" lineNum="18" pc="268437738" symbol="draw"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceApp.mc" lineNum="7" pc="268437753" symbol="initialize"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceApp.mc" lineNum="20" pc="268437780" symbol="getInitialView"/>
+<entry filename="C:\\Users\\mars\\workspace\\Run3Face\\source\\Run3FaceApp.mc" lineNum="25" pc="268437820" symbol="onSettingsChanged"/>
+<entry filename="Rez" lineNum="36" pc="268437839" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="37" pc="268437914" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="38" pc="268437966" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="39" pc="268438018" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="40" pc="268438032" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="41" pc="268438129" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="42" pc="268438144" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="43" pc="268438196" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="44" pc="268438242" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="41" method="true" symbol="drawBattery"/>
+<entry field="true" id="23" symbol="ColorBlue"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388770" module="true" symbol="Strings"/>
+<entry field="true" id="19" symbol="AlmostFull"/>
+<entry field="true" id="30" symbol="ColorWhite"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="42" method="true" symbol="calAxis"/>
+<entry field="true" id="29" symbol="ColorBlack"/>
+<entry id="8388769" module="true" symbol="Rez"/>
+<entry field="true" id="20" symbol="FullBattery"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="33" symbol="startY"/>
+<entry field="true" id="32" symbol="startX"/>
+<entry field="true" id="24" symbol="ColorRed"/>
+<entry field="true" id="25" symbol="ForegroundColorTitle"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="31" symbol="AppName"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="38" symbol="cubeCenterY"/>
+<entry field="true" id="37" symbol="cubeCenterX"/>
+<entry id="8" object="true" symbol="Run3FaceView"/>
+<entry id="9" object="true" symbol="Background"/>
+<entry field="true" id="21" symbol="LauncherIcon"/>
+<entry field="true" id="13" symbol="id_run3"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry field="true" id="17" symbol="FiftyPercentBattery"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8388771" module="true" symbol="Drawables"/>
+<entry field="true" id="16" symbol="TwentyFivePercentBattery"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="36" symbol="cubeStartY"/>
+<entry field="true" id="35" symbol="cubeStartX"/>
+<entry field="true" id="27" symbol="ColorDarkGray"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry id="8389348" symbol="font"/>
+<entry field="true" id="22" symbol="ColorLightGray"/>
+<entry id="8389347" symbol="color"/>
+<entry field="true" id="26" symbol="BackgroundColorTitle"/>
+<entry field="true" id="18" symbol="SeventyFivePercentBattery"/>
+<entry field="true" id="8389067" symbol="height"/>
+<entry field="true" id="34" symbol="cubeSize"/>
+<entry id="10" object="true" symbol="Run3FaceApp"/>
+<entry id="12" module="true" symbol="Layouts"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="39" symbol="outerCircleRadius"/>
+<entry field="true" id="28" symbol="MilitaryFormatTitle"/>
+<entry id="8389345" symbol="rezId"/>
+<entry field="true" id="8389066" symbol="width"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="11" module="true" symbol="Menus"/>
+<entry field="true" id="15" symbol="AlmostEmpty"/>
+<entry field="true" id="14" symbol="EmptyBattery"/>
+<entry id="8388772" module="true" symbol="Fonts"/>
+<entry field="true" id="40" symbol="innerCircleRadius"/>
+</symbolTable>
+<localVars>
+<entry endPc="268436565" name="view" stackId="6" startPc="268435875"/>
+<entry endPc="268436565" name="hours" stackId="4" startPc="268435875"/>
+<entry endPc="268436565" name="dateStr" stackId="9" startPc="268435875"/>
+<entry endPc="268436565" name="timeString" stackId="5" startPc="268435875"/>
+<entry endPc="268436565" name="clockTime" stackId="3" startPc="268435875"/>
+<entry endPc="268436565" name="info" stackId="7" startPc="268435875"/>
+<entry endPc="268436565" name="timeStr" stackId="8" startPc="268435875"/>
+<entry endPc="268436565" name="timeFormat" stackId="2" startPc="268435875"/>
+<entry endPc="268437274" name="batteryLevel" stackId="5" startPc="268436577"/>
+<entry endPc="268437274" name="systemStats" stackId="4" startPc="268436577"/>
+<entry endPc="268437682" name="dictionary" stackId="1" startPc="268437641"/>
+<entry endPc="268438269" name="rez_cmp_local_bitmap_id_run3" stackId="2" startPc="268437839"/>
+<entry endPc="268438269" name="rez_cmp_local_label_TimeLabel_fontHeight" stackId="5" startPc="268437839"/>
+<entry endPc="268438269" name="rez_cmp_local_label_TimeLabel_font" stackId="3" startPc="268437839"/>
+<entry endPc="268438269" name="rez_cmp_local_label_TimeLabel" stackId="4" startPc="268437839"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry name="initialize" parent="Run3FaceView">
+<documentation/>
+</functionEntry>
+<functionEntry name="onLayout" parent="Run3FaceView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onShow" parent="Run3FaceView">
+<documentation><![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate" parent="Run3FaceView">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onHide" parent="Run3FaceView">
+<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onExitSleep" parent="Run3FaceView">
+<documentation><![CDATA[<div class="description"> The user has just looked at their watch. Timers and animations may be started here.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onEnterSleep" parent="Run3FaceView">
+<documentation><![CDATA[<div class="description"> Terminate any active timers and prepare for slow updates.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="drawBattery" parent="Run3FaceView">
+<param id="dc"/>
+<param id="width"/>
+<param id="height"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="calAxis" parent="Run3FaceView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="Background">
+<documentation/>
+</functionEntry>
+<functionEntry name="draw" parent="Background">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize" parent="Run3FaceApp">
+<documentation/>
+</functionEntry>
+<functionEntry name="onStart" parent="Run3FaceApp">
+<documentation><![CDATA[<div class="description"> onStart() is called on application start up<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onStop" parent="Run3FaceApp">
+<documentation><![CDATA[<div class="description"> onStop() is called when your application is exiting<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="getInitialView" parent="Run3FaceApp">
+<documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onSettingsChanged" parent="Run3FaceApp">
+<documentation><![CDATA[<div class="description"> New app settings have been received so trigger a UI update<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="WatchFace" parent="Layouts">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
+</functionEntry>
+</functions>
+</debugInfo>

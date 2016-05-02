@@ -1,0 +1,4 @@
+<layout id="WatchFace">
+    <bitmap id="id_run3" filename="../drawables/20160316_1737.jpg" x="center" y="center" />
+    <label id="TimeLabel" x="center" y="center" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+</layout>

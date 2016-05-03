@@ -6,4 +6,8 @@
     <bitmap id="SeventyFivePercentBattery" filename="images/75PercentBattery.png" />
     <bitmap id="AlmostFull" filename="images/AlmostFull.png" />
     <bitmap id="FullBattery" filename="images/FullBattery.png" />
+    <bitmap id="Logo" filename="images/logo-s.png" />
+    <fonts>
+        <font id="id_font_black_diamond" filename="fonts/blackdiamond.fnt" filter="0123456789" />
+    </fonts>
 </resources>

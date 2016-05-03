@@ -1,5 +1,4 @@
 <strings>
-
     <string id="AppName">Run3Face</string>
 
     <string id="BackgroundColorTitle">Background Color</string>
@@ -12,5 +11,4 @@
     <string id="ColorWhite">White</string>
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
-
 </strings>

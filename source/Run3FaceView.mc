@@ -8,8 +8,11 @@ using Toybox.Application as App;
 
 class Run3FaceView extends Ui.WatchFace {
 
+    var font;
     var width;
     var height;
+    var xCenter;
+    var vCenter;
     var startX;
     var startY;
     var cubeSize;
@@ -27,6 +30,8 @@ class Run3FaceView extends Ui.WatchFace {
     hidden var SeventyFivePercentBattery;
     hidden var AlmostFull;
     hidden var FullBattery;
+    
+    hidden var bg;
 
     function initialize() {
         WatchFace.initialize();
@@ -35,6 +40,7 @@ class Run3FaceView extends Ui.WatchFace {
     //! Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
+        //Load bitmap
         EmptyBattery = Ui.loadResource(Rez.Drawables.EmptyBattery);
         AlmostEmpty = Ui.loadResource(Rez.Drawables.AlmostEmpty);
         TwentyFivePercentBattery = Ui.loadResource(Rez.Drawables.TwentyFivePercentBattery);
@@ -42,9 +48,16 @@ class Run3FaceView extends Ui.WatchFace {
         SeventyFivePercentBattery = Ui.loadResource(Rez.Drawables.SeventyFivePercentBattery);
         AlmostFull = Ui.loadResource(Rez.Drawables.AlmostFull);
         FullBattery = Ui.loadResource(Rez.Drawables.FullBattery);
+        FullBattery = Ui.loadResource(Rez.Drawables.FullBattery);
+        
+        bg = Ui.loadResource(Rez.Drawables.Logo);
+        
         width = dc.getWidth();
     	height = dc.getHeight();
-    	 calAxis(dc);
+    	xCenter = width/2;
+    	vCenter = height/2;
+    	font = Ui.loadResource(Rez.Fonts.id_font_black_diamond);
+    	calAxis(dc);
     }
 
     //! Called when this View is brought to the foreground. Restore
@@ -55,6 +68,7 @@ class Run3FaceView extends Ui.WatchFace {
 
     //! Update the view
     function onUpdate(dc) {
+        drawBackground(dc);
     
         // Get the current time and format it correctly
         var timeFormat = "$1$:$2$";
@@ -85,11 +99,15 @@ class Run3FaceView extends Ui.WatchFace {
         var timeStr = Lang.format("$1$:$2$", [info.hour, info.min]);
         var dateStr = Lang.format("$1$ $2$", [info.month, info.day]);
         
-        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(startX + 10, startY + 25, Gfx.FONT_SMALL, timeStr, Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(startX + cubeSize - 40, startX + cubeSize - 35, Gfx.FONT_SMALL, dateStr, Gfx.TEXT_JUSTIFY_LEFT);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(xCenter,vCenter+10, Gfx.FONT_SMALL, timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter,vCenter-10, Gfx.FONT_LARGE, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
         
-        View.onUpdate(dc);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(xCenter,0,font,"12",Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width,vCenter,font,"3", Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(xCenter,height-30,font,"6", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(0,vCenter,font,"9",Gfx.TEXT_JUSTIFY_LEFT);
     }
 
     //! Called when this View is removed from the screen. Save the
@@ -104,6 +122,11 @@ class Run3FaceView extends Ui.WatchFace {
 
     //! Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    
+    }
+    
+    function drawBackground(dc){
+      dc.drawBitmap(Ui.LAYOUT_HALIGN_CENTER , vCenter-50, bg);
     }
     
     function drawBattery(dc,width,height){
@@ -154,6 +177,5 @@ class Run3FaceView extends Ui.WatchFace {
 	
 			outerCircleRadius = 0.375 * cubeSize;
 	        innerCircleRadius = 0.40 * outerCircleRadius;
-
     }
 }

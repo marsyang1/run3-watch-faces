@@ -9,6 +9,6 @@
     <bitmap id="Logo" filename="images/logo-ms.png" />
     <fonts>
         <font id="id_font_black_diamond" filename="fonts/blackdiamond.fnt" filter="0123456789" />
-        <font id="id_font_sofia" filename="fonts/sofia.fnt" filter="0123456789:" />
+        <font id="id_font_open_sans" filename="fonts/OpenSans.fnt"/>
     </fonts>
 </resources>

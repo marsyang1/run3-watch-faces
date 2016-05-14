@@ -2,9 +2,7 @@
     <iq:application entry="Run3FaceApp" id="E4454B6D5FC04DD399ACB8BDAD624951" launcherIcon="@Drawables.LauncherIcon" name="@Strings.AppName" type="watchface">
 
         <iq:products>
-            <iq:product id="fr630"/>
             <iq:product id="fr235"/>
-            <iq:product id="fr230"/>
         </iq:products>
 
         <iq:permissions>

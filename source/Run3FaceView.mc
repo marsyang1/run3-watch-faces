@@ -13,7 +13,7 @@ class Run3FaceView extends Ui.WatchFace {
     var width;
     var height;
     var xCenter;
-    var vCenter;
+    var yCenter;
 
     hidden var EmptyBattery;
     hidden var AlmostEmpty;
@@ -43,7 +43,7 @@ class Run3FaceView extends Ui.WatchFace {
         bg = Ui.loadResource(Rez.Drawables.Logo);
     	
     	font = Ui.loadResource(Rez.Fonts.id_font_black_diamond);
-    	digiFont = Ui.loadResource(Rez.Fonts.id_font_black_diamond);
+    	digiFont = Ui.loadResource(Rez.Fonts.id_font_open_sans);
     	calAxis(dc);
     }
 
@@ -82,63 +82,65 @@ class Run3FaceView extends Ui.WatchFace {
     function drawBackground(dc){
       var bgWidth = bg.getWidth();
       //Sys.println("bgWidth =" + bgWidth);
-      dc.drawBitmap(xCenter - (bgWidth/2) , vCenter-60, bg);
+      dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, bg);
     }
     
     function drawBattery(dc,width,height){
     	var systemStats = Sys.getSystemStats();
         var batteryLevel = systemStats.battery;
+        var batteryLocX = xCenter-65;
+        var batteryLocY = yCenter+43;
 		
 		if (batteryLevel >= 1.0 and batteryLevel < 5.0) {
-			dc.drawBitmap(width/2-30, height/2-10, EmptyBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
 		} else if(batteryLevel >= 5.0 and batteryLevel < 14.0) {
-			dc.drawBitmap(width/2-30, height/2-10, AlmostEmpty);
+			dc.drawBitmap(batteryLocX, batteryLocY, AlmostEmpty);
 		} else if (batteryLevel >= 14.0 and batteryLevel < 28.0) {
-			dc.drawBitmap(width/2-30, height/2-10, TwentyFivePercentBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
 		} else if (batteryLevel >= 28.0 and batteryLevel < 42.0) {
-			dc.drawBitmap(width/2-30, height/2-10, TwentyFivePercentBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
 		} else if (batteryLevel >= 42.0 and batteryLevel < 56.0) {
-			dc.drawBitmap(width/2-30, height/2-10, FiftyPercentBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
 		} else if (batteryLevel >= 56.0 and batteryLevel < 70.0) {
-			dc.drawBitmap(width/2-30, height/2-10, FiftyPercentBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
 		} else if (batteryLevel >= 70.0 and batteryLevel < 84.0) {
-			dc.drawBitmap(width/2-30, height/2-10, SeventyFivePercentBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, SeventyFivePercentBattery);
 		} else if (batteryLevel >= 84.0 and batteryLevel < 98.0) {
-			dc.drawBitmap(width/2-30, height/2-10, AlmostFull);
+			dc.drawBitmap(batteryLocX, batteryLocY, AlmostFull);
 		} else if(batteryLevel >= 98.0) {
-			dc.drawBitmap(width/2-30, height/2-10, FullBattery);
+			dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
 		}
     }
     
     function drawTime(dc,info){
         var timeStr = Lang.format("$1$:$2$", [info.hour, info.min]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(xCenter,vCenter+10, digiFont , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter,yCenter-50, digiFont , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function drawCalendar(dc,info){
         var dateStr = Lang.format("$1$ $2$", [info.month, info.day]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(xCenter + 50,vCenter-10, Gfx.FONT_MEDIUM , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter,yCenter+35, Gfx.FONT_LARGE , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function drawPoint(dc){
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(xCenter,0,font,"12",Gfx.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width,vCenter,font,"3", Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(width,yCenter,font,"3", Gfx.TEXT_JUSTIFY_RIGHT);
         dc.drawText(xCenter,height-30,font,"6", Gfx.TEXT_JUSTIFY_CENTER);
-        dc.drawText(0,vCenter,font,"9",Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(0,yCenter,font,"9",Gfx.TEXT_JUSTIFY_LEFT);
     }
     
     function calAxis(dc){
             width = dc.getWidth();
 	        height = dc.getHeight();
 	        xCenter = width/2;
-    		vCenter = height/2;
+    		yCenter = height/2;
 	
 	        Sys.println("width = " + width);
             Sys.println("height = " + height);
             Sys.println("xCenter = " + xCenter);
-            Sys.println("vCenter = " + vCenter);
+            Sys.println("yCenter = " + yCenter);
     }
 }

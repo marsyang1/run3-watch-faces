@@ -1,4 +1,4 @@
 <layout id="WatchFace">
-    <bitmap id="id_run3" filename="../drawables/logo-xs.png" x="center" y="center" />
+    <bitmap id="id_run3" filename="../images/logo-xs.png" x="center" y="center" />
     <label id="TimeLabel" x="0" y="0" font="Gfx.FONT_LARGE" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
 </layout>

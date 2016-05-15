@@ -51,6 +51,18 @@ class Run3FaceView extends Ui.WatchFace {
     	digiFont = Ui.loadResource(Rez.Fonts.id_font_open_sans);
     	calAxis(dc);
     }
+    
+    function calAxis(dc){
+            width = dc.getWidth();
+	        height = dc.getHeight();
+	        xCenter = width/2;
+    		yCenter = height/2;
+	
+	        Sys.println("width = " + width);
+            Sys.println("height = " + height);
+            Sys.println("xCenter = " + xCenter);
+            Sys.println("yCenter = " + yCenter);
+    }
 
     //! Called when this View is brought to the foreground. Restore
     //! the state of this View and prepare it to be shown. This includes
@@ -148,15 +160,4 @@ class Run3FaceView extends Ui.WatchFace {
         dc.drawText(0,yCenter,font,"9",Gfx.TEXT_JUSTIFY_LEFT);
     }
     
-    function calAxis(dc){
-            width = dc.getWidth();
-	        height = dc.getHeight();
-	        xCenter = width/2;
-    		yCenter = height/2;
-	
-	        Sys.println("width = " + width);
-            Sys.println("height = " + height);
-            Sys.println("xCenter = " + xCenter);
-            Sys.println("yCenter = " + yCenter);
-    }
 }

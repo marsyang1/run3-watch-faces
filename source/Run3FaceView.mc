@@ -141,13 +141,13 @@ class Run3FaceView extends Ui.WatchFace {
     }
     
     function drawTime(dc,info){
-        var timeStr = Lang.format("$1$:$2$", [info.hour, info.min]);
+        var timeStr = Lang.format("$1$:$2$", [info.hour.format("%02d"), info.min.format("%02d")]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(xCenter,yCenter-50, digiFont , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function drawCalendar(dc,info){
-        var dateStr = Lang.format("$1$ $2$", [info.month, info.day]);
+        var dateStr = Lang.format("$1$ $2$", [info.month, info.day.format("%02d")]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(xCenter,yCenter+35, Gfx.FONT_LARGE , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
     }

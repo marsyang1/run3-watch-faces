@@ -7,6 +7,7 @@
     <bitmap id="AlmostFull" filename="images/AlmostFull.png" />
     <bitmap id="FullBattery" filename="images/FullBattery.png" />
     <bitmap id="Logo" filename="images/logo-ms.png" />
+    <bitmap id="BlueTooth" filename="images/1463327337_Bluetooth.png" />
     <fonts>
         <font id="id_font_black_diamond" filename="fonts/blackdiamond.fnt" filter="0123456789" />
         <font id="id_font_open_sans" filename="fonts/OpenSans.fnt"/>

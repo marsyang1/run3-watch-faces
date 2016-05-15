@@ -14,6 +14,8 @@ class Run3FaceView extends Ui.WatchFace {
     var height;
     var xCenter;
     var yCenter;
+    
+    var deviceSetting;
 
     hidden var EmptyBattery;
     hidden var AlmostEmpty;
@@ -24,6 +26,7 @@ class Run3FaceView extends Ui.WatchFace {
     hidden var FullBattery;
     
     var bg;
+    var blueTooth;
 
     function initialize() {
         WatchFace.initialize();
@@ -40,7 +43,9 @@ class Run3FaceView extends Ui.WatchFace {
         SeventyFivePercentBattery = Ui.loadResource(Rez.Drawables.SeventyFivePercentBattery);
         AlmostFull = Ui.loadResource(Rez.Drawables.AlmostFull);
         FullBattery = Ui.loadResource(Rez.Drawables.FullBattery);
+        
         bg = Ui.loadResource(Rez.Drawables.Logo);
+        blueTooth = Ui.loadResource(Rez.Drawables.BlueTooth);
     	
     	font = Ui.loadResource(Rez.Fonts.id_font_black_diamond);
     	digiFont = Ui.loadResource(Rez.Fonts.id_font_open_sans);
@@ -55,7 +60,11 @@ class Run3FaceView extends Ui.WatchFace {
 
     //! Update the view
     function onUpdate(dc) {
+        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
+        dc.clear();
+        
         drawBackground(dc);
+        drawBlueTooth(dc);
         drawBattery(dc,width,height);
 
         var info = Calendar.info(Time.now(), Time.FORMAT_LONG);
@@ -83,6 +92,13 @@ class Run3FaceView extends Ui.WatchFace {
       var bgWidth = bg.getWidth();
       //Sys.println("bgWidth =" + bgWidth);
       dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, bg);
+    }
+    
+    function drawBlueTooth(dc){
+      deviceSetting = Sys.getDeviceSettings();
+      if( deviceSetting.phoneConnected == true) {
+          dc.drawBitmap(xCenter+50, yCenter+40, blueTooth);
+      } 
     }
     
     function drawBattery(dc,width,height){

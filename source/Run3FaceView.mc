@@ -27,6 +27,7 @@ class Run3FaceView extends Ui.WatchFace {
     
     var bg;
     var blueTooth;
+    var splitter;
 
     function initialize() {
         WatchFace.initialize();
@@ -37,18 +38,17 @@ class Run3FaceView extends Ui.WatchFace {
         setLayout(Rez.Layouts.WatchFace(dc));
         //Load bitmap
         EmptyBattery = Ui.loadResource(Rez.Drawables.EmptyBattery);
-        AlmostEmpty = Ui.loadResource(Rez.Drawables.AlmostEmpty);
         TwentyFivePercentBattery = Ui.loadResource(Rez.Drawables.TwentyFivePercentBattery);
         FiftyPercentBattery = Ui.loadResource(Rez.Drawables.FiftyPercentBattery);
         SeventyFivePercentBattery = Ui.loadResource(Rez.Drawables.SeventyFivePercentBattery);
-        AlmostFull = Ui.loadResource(Rez.Drawables.AlmostFull);
         FullBattery = Ui.loadResource(Rez.Drawables.FullBattery);
         
         bg = Ui.loadResource(Rez.Drawables.Logo);
         blueTooth = Ui.loadResource(Rez.Drawables.BlueTooth);
+        splitter = Ui.loadResource(Rez.Drawables.Splitter);
     	
-    	font = Ui.loadResource(Rez.Fonts.id_font_black_diamond);
-    	digiFont = Ui.loadResource(Rez.Fonts.id_font_open_sans);
+    	font = Ui.loadResource(Rez.Fonts.id_font_calendar);
+    	digiFont = Ui.loadResource(Rez.Fonts.id_font_time);
     	calAxis(dc);
     }
     
@@ -76,7 +76,7 @@ class Run3FaceView extends Ui.WatchFace {
         dc.clear();
         
         drawBackground(dc);
-        drawBlueTooth(dc);
+        //drawBlueTooth(dc);
         drawBattery(dc,width,height);
 
         var info = Calendar.info(Time.now(), Time.FORMAT_LONG);
@@ -103,13 +103,18 @@ class Run3FaceView extends Ui.WatchFace {
     function drawBackground(dc){
       var bgWidth = bg.getWidth();
       //Sys.println("bgWidth =" + bgWidth);
-      dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, bg);
+      deviceSetting = Sys.getDeviceSettings();
+      if( deviceSetting.phoneConnected == true) {
+          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, blueTooth);
+      }else{
+          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, bg);
+      }
     }
     
     function drawBlueTooth(dc){
       deviceSetting = Sys.getDeviceSettings();
       if( deviceSetting.phoneConnected == true) {
-          dc.drawBitmap(xCenter+50, yCenter+40, blueTooth);
+          //dc.drawBitmap(xCenter+50, yCenter+40, blueTooth);
       } 
     }
     
@@ -122,7 +127,7 @@ class Run3FaceView extends Ui.WatchFace {
 		if (batteryLevel >= 1.0 and batteryLevel < 5.0) {
 			dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
 		} else if(batteryLevel >= 5.0 and batteryLevel < 14.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, AlmostEmpty);
+			dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
 		} else if (batteryLevel >= 14.0 and batteryLevel < 28.0) {
 			dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
 		} else if (batteryLevel >= 28.0 and batteryLevel < 42.0) {
@@ -134,22 +139,25 @@ class Run3FaceView extends Ui.WatchFace {
 		} else if (batteryLevel >= 70.0 and batteryLevel < 84.0) {
 			dc.drawBitmap(batteryLocX, batteryLocY, SeventyFivePercentBattery);
 		} else if (batteryLevel >= 84.0 and batteryLevel < 98.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, AlmostFull);
+			dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
 		} else if(batteryLevel >= 98.0) {
 			dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
 		}
     }
     
     function drawTime(dc,info){
-        var timeStr = Lang.format("$1$:$2$", [info.hour.format("%02d"), info.min.format("%02d")]);
+        var timeStr = Lang.format("$1$", [info.hour.format("%02d")]);
+        var timeStr2 = Lang.format("$1$", [info.min.format("%02d")]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(xCenter,yCenter-50, digiFont , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter-50,yCenter-50, digiFont , timeStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter+55,yCenter-50, digiFont , timeStr2, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawBitmap(xCenter, yCenter-18, splitter);
     }
     
     function drawCalendar(dc,info){
         var dateStr = Lang.format("$1$ $2$", [info.month, info.day.format("%02d")]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(xCenter,yCenter+35, Gfx.FONT_LARGE , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter+30,yCenter+35, Gfx.FONT_LARGE , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function drawPoint(dc){

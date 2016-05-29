@@ -1,15 +1,14 @@
 <resources>
-    <bitmap id="EmptyBattery" filename="images/EmptyBattery.png" />
-    <bitmap id="AlmostEmpty" filename="images/AlmostEmpty.png" />
-    <bitmap id="TwentyFivePercentBattery" filename="images/25PercentBattery.png" />
-    <bitmap id="FiftyPercentBattery" filename="images/50PercentBattery.png" />
-    <bitmap id="SeventyFivePercentBattery" filename="images/75PercentBattery.png" />
-    <bitmap id="AlmostFull" filename="images/AlmostFull.png" />
-    <bitmap id="FullBattery" filename="images/FullBattery.png" />
-    <bitmap id="Logo" filename="images/logo-ms.png" />
-    <bitmap id="BlueTooth" filename="images/1463327337_Bluetooth.png" />
+    <bitmap id="EmptyBattery" filename="images/G-RUN_0_battery.png" />
+    <bitmap id="TwentyFivePercentBattery" filename="images/G-RUN_25_battery.png" />
+    <bitmap id="FiftyPercentBattery" filename="images/G-RUN_50_battery.png" />
+    <bitmap id="SeventyFivePercentBattery" filename="images/G-RUN_75_battery.png" />
+    <bitmap id="FullBattery" filename="images/G-RUN_100_battery.png" />
+    <bitmap id="Logo" filename="images/G-RUN_LOGO.png" />
+    <bitmap id="BlueTooth" filename="images/G-RUN_blue_tooth.png" />
+    <bitmap id="Splitter" filename="images/G-RUN_time_splitter.png" />
     <fonts>
-        <font id="id_font_black_diamond" filename="fonts/blackdiamond.fnt" filter="0123456789" />
-        <font id="id_font_open_sans" filename="fonts/OpenSans.fnt"/>
+        <font id="id_font_time" filename="fonts/helvetica_90.fnt"/>
+        <font id="id_font_calendar" filename="fonts/helvetica_20.fnt"/>
     </fonts>
 </resources>

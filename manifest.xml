@@ -9,10 +9,7 @@
         </iq:permissions>
 
         <iq:languages>
-            <iq:language>deu</iq:language>
             <iq:language>eng</iq:language>
-            <iq:language>jpn</iq:language>
-            <iq:language>zhs</iq:language>
             <iq:language>zht</iq:language>
         </iq:languages>
 

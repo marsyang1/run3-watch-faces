@@ -14,6 +14,10 @@ class Run3FaceView extends Ui.WatchFace {
     var height;
     var xCenter;
     var yCenter;
+    var yFix=0;
+    
+    var beforeBatteryLife=0;
+    var screenSharp;
     
     var deviceSetting;
 
@@ -24,6 +28,8 @@ class Run3FaceView extends Ui.WatchFace {
     hidden var SeventyFivePercentBattery;
     hidden var AlmostFull;
     hidden var FullBattery;
+    hidden var ChargingBattery;
+    hidden var FullChargingBattery;
     
     var bg;
     var blueTooth;
@@ -42,6 +48,8 @@ class Run3FaceView extends Ui.WatchFace {
         FiftyPercentBattery = Ui.loadResource(Rez.Drawables.FiftyPercentBattery);
         SeventyFivePercentBattery = Ui.loadResource(Rez.Drawables.SeventyFivePercentBattery);
         FullBattery = Ui.loadResource(Rez.Drawables.FullBattery);
+        ChargingBattery = Ui.loadResource(Rez.Drawables.ChargingBattery);
+        FullChargingBattery = Ui.loadResource(Rez.Drawables.FullChargingBattery);
         
         bg = Ui.loadResource(Rez.Drawables.Logo);
         blueTooth = Ui.loadResource(Rez.Drawables.BlueTooth);
@@ -49,6 +57,16 @@ class Run3FaceView extends Ui.WatchFace {
     	
     	font = Ui.loadResource(Rez.Fonts.id_font_calendar);
     	digiFont = Ui.loadResource(Rez.Fonts.id_font_time);
+    	
+    	deviceSetting = Sys.getDeviceSettings();
+    	Sys.println("screenSharp = " +  deviceSetting.screenShape);
+    	if( deviceSetting.screenShape == 3){
+    	  yFix=12;
+    	}
+    	
+    	var systemStats = Sys.getSystemStats();
+    	beforeBatteryLife =  systemStats.battery;
+    	
     	calAxis(dc);
     }
     
@@ -105,9 +123,9 @@ class Run3FaceView extends Ui.WatchFace {
       //Sys.println("bgWidth =" + bgWidth);
       deviceSetting = Sys.getDeviceSettings();
       if( deviceSetting.phoneConnected == true) {
-          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, blueTooth);
+          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80+yFix, blueTooth);
       }else{
-          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80, bg);
+          dc.drawBitmap(xCenter - (bgWidth/2)+5 , yCenter-80+yFix, bg);
       }
     }
     
@@ -123,26 +141,35 @@ class Run3FaceView extends Ui.WatchFace {
         var batteryLevel = systemStats.battery;
         var batteryLocX = xCenter-65;
         var batteryLocY = yCenter+43;
-		
-		if (batteryLevel >= 1.0 and batteryLevel < 5.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
-		} else if(batteryLevel >= 5.0 and batteryLevel < 14.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
-		} else if (batteryLevel >= 14.0 and batteryLevel < 28.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
-		} else if (batteryLevel >= 28.0 and batteryLevel < 42.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
-		} else if (batteryLevel >= 42.0 and batteryLevel < 56.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
-		} else if (batteryLevel >= 56.0 and batteryLevel < 70.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
-		} else if (batteryLevel >= 70.0 and batteryLevel < 84.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, SeventyFivePercentBattery);
-		} else if (batteryLevel >= 84.0 and batteryLevel < 98.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
-		} else if(batteryLevel >= 98.0) {
-			dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
+        
+        if( batteryLevel > beforeBatteryLife){
+          if(batteryLevel == 100 ){
+             dc.drawBitmap(batteryLocX, batteryLocY, FullChargingBattery);
+          }else{
+             dc.drawBitmap(batteryLocX, batteryLocY, ChargingBattery);
+          }
+		} else{ 
+		    if (batteryLevel >= 1.0 and batteryLevel < 5.0) {
+		       dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
+		    } else if(batteryLevel >= 5.0 and batteryLevel < 14.0) {
+		       dc.drawBitmap(batteryLocX, batteryLocY, EmptyBattery);
+		    } else if (batteryLevel >= 14.0 and batteryLevel < 28.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
+		    } else if (batteryLevel >= 28.0 and batteryLevel < 42.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, TwentyFivePercentBattery);
+		    } else if (batteryLevel >= 42.0 and batteryLevel < 56.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
+		    } else if (batteryLevel >= 56.0 and batteryLevel < 70.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, FiftyPercentBattery);
+		    } else if (batteryLevel >= 70.0 and batteryLevel < 84.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, SeventyFivePercentBattery);
+		    } else if (batteryLevel >= 84.0 and batteryLevel < 98.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, FullBattery);
+		    } else if(batteryLevel >= 98.0) {
+			   dc.drawBitmap(batteryLocX, batteryLocY, FullChargingBattery);
+		    }
 		}
+		 beforeBatteryLife =  systemStats.battery;
     }
     
     function drawTime(dc,info){

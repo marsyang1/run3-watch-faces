@@ -4,6 +4,8 @@
     <bitmap id="FiftyPercentBattery" filename="images/G-RUN_50_battery.png" />
     <bitmap id="SeventyFivePercentBattery" filename="images/G-RUN_75_battery.png" />
     <bitmap id="FullBattery" filename="images/G-RUN_100_battery.png" />
+    <bitmap id="ChargingBattery" filename="images/G-RUN_battery_charging.png" />
+    <bitmap id="FullChargingBattery" filename="images/G-RUN_battery_full.png" />
     <bitmap id="Logo" filename="images/G-RUN_LOGO.png" />
     <bitmap id="BlueTooth" filename="images/G-RUN_blue_tooth.png" />
     <bitmap id="Splitter" filename="images/G-RUN_time_splitter.png" />

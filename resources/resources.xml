@@ -11,6 +11,6 @@
     <bitmap id="Splitter" filename="images/G-RUN_time_splitter.png" />
     <fonts>
         <font id="id_font_time" filename="fonts/helvetica_90.fnt"/>
-        <font id="id_font_calendar" filename="fonts/helvetica_20.fnt"/>
+        <font id="id_font_calendar" filename="fonts/helvetica_28.fnt"/>
     </fonts>
 </resources>

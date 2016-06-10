@@ -1,6 +1,10 @@
 Run3Crew Watch Faces
 ====================
 
+* 0.5.2-RELEASE
+    * layout fix - month character .
+* 0.5.1-RELEASE
+    * layout fix.
 * 0.5-RELEASE
     * Add battery charging display.
     * add Forerunner 920XT , 230 Support.

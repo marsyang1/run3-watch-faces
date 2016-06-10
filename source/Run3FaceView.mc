@@ -140,7 +140,7 @@ class Run3FaceView extends Ui.WatchFace {
     	var systemStats = Sys.getSystemStats();
         var batteryLevel = systemStats.battery;
         var batteryLocX = xCenter-65;
-        var batteryLocY = yCenter+43;
+        var batteryLocY = yCenter+46;
         
         if( batteryLevel > beforeBatteryLife){
           if(batteryLevel == 100 ){
@@ -182,9 +182,11 @@ class Run3FaceView extends Ui.WatchFace {
     }
     
     function drawCalendar(dc,info){
-        var dateStr = Lang.format("$1$ $2$", [info.month, info.day.format("%02d")]);
+        var monthNum = Calendar.info(Time.now(), Time.FORMAT_SHORT).month;
+        var monthString = getMonString(monthNum);
+        var dateStr = Lang.format("$1$ $2$", [monthString, info.day.format("%02d")]);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(xCenter+30,yCenter+35, Gfx.FONT_LARGE , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(xCenter+30,yCenter+40, font , dateStr, Gfx.TEXT_JUSTIFY_CENTER);
     }
     
     function drawPoint(dc){
@@ -193,6 +195,39 @@ class Run3FaceView extends Ui.WatchFace {
         dc.drawText(width,yCenter,font,"3", Gfx.TEXT_JUSTIFY_RIGHT);
         dc.drawText(xCenter,height-30,font,"6", Gfx.TEXT_JUSTIFY_CENTER);
         dc.drawText(0,yCenter,font,"9",Gfx.TEXT_JUSTIFY_LEFT);
+    }
+    
+    /**
+     * ... something strange about display mon by Calendar.info(Time.now(), Time.FORMAT_MEDIUM).month;
+     * At simulator it work perfect.but download at watch will display number.
+     */
+    function getMonString(monthNum) {
+            if (monthNum == 1) {
+		       return "Jan";
+		    } else if(monthNum == 2) {
+		       return "Feb";
+		    } else if(monthNum == 3) {
+		       return "Mar";
+		    }else if(monthNum == 4) {
+		       return "Apr";
+		    }else if(monthNum == 5) {
+		       return "May";
+		    }else if(monthNum == 6) {
+		       return "Jun";
+		    }else if(monthNum == 7) {
+		       return "Jul";
+		    }else if(monthNum == 8) {
+		       return "Aug";
+		    }else if(monthNum == 9) {
+		       return "Sep";
+		    }else if(monthNum == 10) {
+		       return "Oct";
+		    }else if(monthNum == 11) {
+		       return "Nov";
+		    }else if(monthNum == 12) {
+		       return "Dec";
+		    }
+		    return "";
     }
     
 }

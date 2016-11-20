@@ -1,7 +1,7 @@
 Run3Crew Watch Faces
 ====================
 * 1.0-RELEASE
-	* update to connect IQ 2.2.0
+	* update to connect IQ 1.3.x
 * 0.5.2-RELEASE
     * layout fix - month character .
 * 0.5.1-RELEASE
